@@ -1,4 +1,4 @@
-🎮 TERMO
+TERMO
 Um projeto simples inspirado no jogo Termo, desenvolvido com HTML, CSS e JavaScript puro. O jogador deve descobrir a palavra secreta de cinco letras. Após cada tentativa, as letras recebem cores indicando se estão corretas, existem na palavra ou não fazem parte dela.
 
 📌 Funcionalidades
