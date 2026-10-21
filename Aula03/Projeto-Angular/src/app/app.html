@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>✨ Gerador de Citações</h1>
+  <p class="subtitulo">Inspire-se com grandes frases de tecnologia e inovação</p>
+
+  <div class="card-citacao">
+    <p class="frase">"{{ citacaoAtual.texto }}"</p>
+    <span class="autor">— {{ citacaoAtual.autor }}</span>
+  </div>
+
+  <button (click)="sortearCitacao()">Sortear Nova Frase</button>
+
+  <p class="contador">Frases visualizadas nesta sessão: <strong>{{ totalVisualizadas }}</strong></p>
+</div>
