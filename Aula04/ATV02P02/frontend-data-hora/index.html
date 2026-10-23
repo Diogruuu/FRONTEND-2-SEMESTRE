@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Data e Hora - Frontend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 { color: #333; font-size: 22px; }
+        .info {
+            font-size: 22px;
+            margin: 20px 0;
+            color: #0070f3;
+            font-weight: bold;
+        }
+        button {
+            background-color: #0070f3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover { background-color: #0051bb; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Aplicação Frontend (Vercel)</h1>
+        <div class="info" id="resultado">Carregando data e hora da API...</div>
+        <button onclick="buscarDataHora()">Atualizar Dados</button>
+    </div>
+
+    <script>
+    // Substitui o link abaixo pelo teu link real do Render
+    const URL_API = 'https://SUA-API-REAL-DO-RENDER.onrender.com/data-hora';
+    
+    function buscarDataHora() {
+        const elementoResultado = document.getElementById('resultado');
+        elementoResultado.innerText = 'A consultar API...';
+
+        fetch(URL_API)
+            .then(response => response.json())
+            .then(data => {
+                elementoResultado.innerHTML = `Data: ${data.data} <br> Hora: ${data.hora}`;
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                elementoResultado.innerText = 'Erro ao ligar à API.';
+            });
+    }
+
+    buscarDataHora();
+</script>
+
+</body>
+</html>

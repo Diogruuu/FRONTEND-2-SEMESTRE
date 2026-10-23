@@ -1,24 +1,16 @@
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors'); // <--- Importante
 
 const app = express();
-const PORT = process.env.PORT || 3000;
-
-app.use(cors());
+app.use(cors()); // <--- Libera o acesso para qualquer frontend (Vercel, local, etc.)
 
 app.get('/data-hora', (req, res) => {
     const agora = new Date();
-    
-    const dataFormatada = agora.toLocaleDateString('pt-BR');
-    const horaFormatada = agora.toLocaleTimeString('pt-BR');
-
     res.json({
-        data: dataFormatada,
-        hora: horaFormatada,
-        timestamp: agora.toISOString()
+        data: agora.toLocaleDateString('pt-BR'),
+        hora: agora.toLocaleTimeString('pt-BR')
     });
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor a rodar na porta ${PORT}`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
