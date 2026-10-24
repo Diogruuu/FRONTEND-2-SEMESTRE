@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Notas - ATV02</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #0056b3;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            padding: 10px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #004494;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 5px solid #0056b3;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nota-info {
+            max-width: 70%;
+        }
+        .nota-info h3 {
+            margin: 0 0 5px 0;
+        }
+        .nota-info p {
+            margin: 0;
+            color: #666;
+        }
+        .acoes button {
+            background-color: #dc3545;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        .acoes button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Minhas Notas</h1>
+        
+        <form id="formNota">
+            <input type="text" id="titulo" placeholder="Título da nota" required>
+            <textarea id="conteudo" placeholder="Conteúdo da nota" rows="3" required></textarea>
+            <button type="submit">Adicionar Nota</button>
+        </form>
+
+        <h2>Lista de Notas</h2>
+        <ul id="listaNotas">
+
+        </ul>
+    </div>
+
+    <script>
+
+        const API_URL = 'http://localhost:3000/notas';
+
+        const formNota = document.getElementById('formNota');
+        const listaNotas = document.getElementById('listaNotas');
+
+        async function carregarNotas() {
+            try {
+                const resposta = await fetch(API_URL);
+                const notas = await resposta.json();
+                
+                listaNotas.innerHTML = '';
+                notas.forEach(nota => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <div class="nota-info">
+                            <h3>${nota.titulo}</h3>
+                            <p>${nota.conteudo}</p>
+                        </div>
+                        <div class="acoes">
+                            <button onclick="deletarNota(${nota.id})">Excluir</button>
+                        </div>
+                    `;
+                    listaNotas.appendChild(li);
+                });
+            } catch (erro) {
+                console.error('Erro ao carregar notas:', erro);
+            }
+        }
+
+        formNota.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const titulo = document.getElementById('titulo').value;
+            const conteudo = document.getElementById('conteudo').value;
+
+            try {
+                await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ titulo, conteudo })
+                });
+
+                formNota.reset();
+                carregarNotas();
+            } catch (erro) {
+                console.error('Erro ao criar nota:', erro);
+            }
+        });
+
+        async function deletarNota(id) {
+            try {
+                await fetch(`${API_URL}/${id}`, {
+                    method: 'DELETE'
+                });
+                carregarNotas();
+            } catch (erro) {
+                console.error('Erro ao excluir nota:', erro);
+            }
+        }
+
+        carregarNotas();
+    </script>
+</body>
+</html>
