@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LUMA Festival: música independente, artistas novos e uma noite para viver junto.">
+    <title>LUMA Festival — O som da cidade</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body
+    class="min-h-screen bg-zinc-950 font-sans text-zinc-100 antialiased selection:bg-lime-300 selection:text-zinc-950">
+    <header class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-5 sm:px-8">
+        <a class="flex items-center gap-3" href="#inicio" aria-label="LUMA Festival, início">
+            <span
+                class="grid size-11 place-items-center rounded-2xl bg-lime-300 text-xl font-black text-zinc-950">L</span>
+            <span class="text-lg font-black tracking-[0.16em] text-white">LUMA<span
+                    class="text-lime-300">.</span></span>
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm font-medium text-zinc-400 md:flex"
+            aria-label="Navegação principal">
+            <a class="transition hover:text-white" href="#lineup">Artistas</a>
+            <a class="transition hover:text-white" href="#experiencia">O festival</a>
+            <a class="transition hover:text-white" href="#ingressos">Ingressos</a>
+        </nav>
+
+        <a class="inline-flex items-center justify-center rounded-full bg-lime-300 px-4 py-2.5 text-sm font-bold text-zinc-950 transition hover:bg-lime-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-200"
+            href="#ingressos">
+            Quero ir <span class="ml-2" aria-hidden="true">↗</span>
+        </a>
+    </header>
+
+    <main id="inicio" class="mx-auto max-w-7xl px-5 sm:px-8">
+        <section class="grid gap-12 py-12 md:grid-cols-2 md:items-center md:py-20" aria-labelledby="titulo-principal">
+            <div>
+                <p
+                    class="inline-flex items-center gap-2 rounded-full border border-lime-300/25 bg-lime-300/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-lime-200">
+                    <span class="size-2 rounded-full bg-lime-300"></span> Música independente · ao vivo
+                </p>
+                <h1 id="titulo-principal"
+                    class="mt-6 max-w-2xl text-5xl font-black leading-[0.98] tracking-tight text-white sm:text-6xl lg:text-7xl">
+                    O som da cidade,<br><span class="text-lime-300">no mesmo lugar.</span>
+                </h1>
+                <p class="mt-6 max-w-xl text-base leading-7 text-zinc-400 sm:text-lg">
+                    Uma noite para descobrir artistas, encontrar os amigos e cantar junto até a última música.
+                </p>
+                <div class="mt-8 flex flex-wrap items-center gap-3">
+                    <a class="inline-flex items-center justify-center rounded-full bg-lime-300 px-6 py-3 text-sm font-bold text-zinc-950 transition hover:bg-lime-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime-200"
+                        href="#lineup">
+                        Explorar artistas <span class="ml-2" aria-hidden="true">↓</span>
+                    </a>
+                    <a class="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-bold text-white transition hover:border-white/40 hover:bg-white/5"
+                        href="#experiencia">
+                        Conheça o LUMA
+                    </a>
+                </div>
+                <div class="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/10 pt-6">
+                    <div>
+                        <p class="text-2xl font-black text-white">12</p>
+                        <p class="mt-1 text-xs text-zinc-500 sm:text-sm">artistas</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-black text-white">3</p>
+                        <p class="mt-1 text-xs text-zinc-500 sm:text-sm">palcos</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-black text-white">1</p>
+                        <p class="mt-1 text-xs text-zinc-500 sm:text-sm">noite inesquecível</p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-violet-600 via-fuchsia-600 to-amber-300 p-6 shadow-2xl sm:p-8 md:min-h-[460px]">
+                <div class="absolute -right-16 -top-16 size-64 rounded-full bg-amber-200/60 blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-10 size-72 rounded-full bg-indigo-950/70 blur-3xl"></div>
+                <div class="relative flex min-h-[300px] flex-col justify-between md:min-h-[400px]">
+                    <div class="flex items-start justify-between gap-4">
+                        <span
+                            class="rounded-full border border-white/30 bg-black/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-white">Edição
+                            de estreia</span>
+                        <span class="text-2xl text-white" aria-hidden="true">✳</span>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold uppercase tracking-[0.25em] text-white/80">Uma cidade. Muitas vozes.
+                        </p>
+                        <p class="mt-3 text-7xl font-black leading-none tracking-[-0.08em] text-white sm:text-8xl">LUMA
+                        </p>
+                        <div class="mt-6 flex items-end justify-between gap-4 border-t border-white/30 pt-4 text-white">
+                            <p class="text-sm font-semibold">Música que<br>acende encontros.</p>
+                            <p class="text-right text-xs font-bold uppercase tracking-[0.16em]">Vem viver<br>essa noite
+                                ↗</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="lineup" class="py-14 sm:py-16" aria-labelledby="titulo-artistas">
+            <div class="mb-8 flex flex-wrap items-end justify-between gap-5">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-lime-300">Gente que faz acontecer</p>
+                    <h2 id="titulo-artistas" class="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
+                        Novos sons, grandes histórias.</h2>
+                </div>
+                <p class="max-w-sm text-sm leading-6 text-zinc-400">Uma seleção de artistas para ouvir de perto e levar
+                    com você.</p>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <article
+                    class="group overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 transition hover:-translate-y-1 hover:border-lime-300/40">
+                    <div
+                        class="relative flex h-44 items-end overflow-hidden bg-gradient-to-br from-fuchsia-600 to-indigo-950 p-5">
+                        <span class="absolute -right-5 -top-8 size-36 rounded-full bg-white/20 blur-2xl"></span>
+                        <div class="relative">
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-white/70">Indie pop</p>
+                            <p class="mt-2 text-3xl font-black tracking-tight text-white">Nina Sol</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 p-5">
+                        <h3 class="font-bold text-white">Nina Sol</h3>
+                        <p class="text-sm text-zinc-500">Palco LUMA · 20h</p>
+                    </div>
+                </article>
+                <article
+                    class="group overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 transition hover:-translate-y-1 hover:border-lime-300/40">
+                    <div
+                        class="relative flex h-44 items-end overflow-hidden bg-gradient-to-br from-cyan-500 to-blue-950 p-5">
+                        <span class="absolute -right-5 -top-8 size-36 rounded-full bg-white/20 blur-2xl"></span>
+                        <div class="relative">
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-white/70">Groove brasileiro</p>
+                            <p class="mt-2 text-3xl font-black tracking-tight text-white">Cais</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 p-5">
+                        <h3 class="font-bold text-white">Cais</h3>
+                        <p class="text-sm text-zinc-500">Palco LUMA · 21h</p>
+                    </div>
+                </article>
+                <article
+                    class="group overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 transition hover:-translate-y-1 hover:border-lime-300/40">
+                    <div
+                        class="relative flex h-44 items-end overflow-hidden bg-gradient-to-br from-amber-400 to-rose-700 p-5">
+                        <span class="absolute -right-5 -top-8 size-36 rounded-full bg-white/20 blur-2xl"></span>
+                        <div class="relative">
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-white/70">R&B alternativo</p>
+                            <p class="mt-2 text-3xl font-black tracking-tight text-white">Lua Alta</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 p-5">
+                        <h3 class="font-bold text-white">Lua Alta</h3>
+                        <p class="text-sm text-zinc-500">Palco Solar · 21h30</p>
+                    </div>
+                </article>
+                <article
+                    class="group overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 transition hover:-translate-y-1 hover:border-lime-300/40">
+                    <div
+                        class="relative flex h-44 items-end overflow-hidden bg-gradient-to-br from-lime-400 to-emerald-950 p-5">
+                        <span class="absolute -right-5 -top-8 size-36 rounded-full bg-white/20 blur-2xl"></span>
+                        <div class="relative">
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-white/70">Rap & poesia</p>
+                            <p class="mt-2 text-3xl font-black tracking-tight text-white">Téo Mar</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 p-5">
+                        <h3 class="font-bold text-white">Téo Mar</h3>
+                        <p class="text-sm text-zinc-500">Palco Solar · 22h</p>
+                    </div>
+                </article>
+                <article
+                    class="group overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 transition hover:-translate-y-1 hover:border-lime-300/40">
+                    <div
+                        class="relative flex h-44 items-end overflow-hidden bg-gradient-to-br from-violet-500 to-purple-950 p-5">
+                        <span class="absolute -right-5 -top-8 size-36 rounded-full bg-white/20 blur-2xl"></span>
+                        <div class="relative">
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-white/70">Dream pop</p>
+                            <p class="mt-2 text-3xl font-black tracking-tight text-white">Quarto 12</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 p-5">
+                        <h3 class="font-bold text-white">Quarto 12</h3>
+                        <p class="text-sm text-zinc-500">Palco LUMA · 22h30</p>
+                    </div>
+                </article>
+                <article
+                    class="group overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 transition hover:-translate-y-1 hover:border-lime-300/40">
+                    <div
+                        class="relative flex h-44 items-end overflow-hidden bg-gradient-to-br from-orange-400 to-red-900 p-5">
+                        <span class="absolute -right-5 -top-8 size-36 rounded-full bg-white/20 blur-2xl"></span>
+                        <div class="relative">
+                            <p class="text-xs font-bold uppercase tracking-[0.18em] text-white/70">Rock tropical</p>
+                            <p class="mt-2 text-3xl font-black tracking-tight text-white">Rita Luz</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between gap-4 p-5">
+                        <h3 class="font-bold text-white">Rita Luz</h3>
+                        <p class="text-sm text-zinc-500">Palco Solar · 23h</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="experiencia" class="grid gap-4 py-14 sm:grid-cols-2 lg:grid-cols-3" aria-label="Sobre o festival">
+            <article class="rounded-3xl border border-white/10 bg-zinc-900 p-6 sm:p-7">
+                <span class="text-2xl text-lime-300" aria-hidden="true">01</span>
+                <h2 class="mt-5 text-xl font-bold text-white">Som para descobrir</h2>
+                <p class="mt-2 text-sm leading-6 text-zinc-400">Artistas independentes, encontros inesperados e música
+                    perto de você.</p>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-zinc-900 p-6 sm:p-7">
+                <span class="text-2xl text-lime-300" aria-hidden="true">02</span>
+                <h2 class="mt-5 text-xl font-bold text-white">Um lugar para ficar</h2>
+                <p class="mt-2 text-sm leading-6 text-zinc-400">Comida boa, espaços de descanso e uma pista aberta para
+                    todo mundo.</p>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-zinc-900 p-6 sm:col-span-2 sm:p-7 lg:col-span-1">
+                <span class="text-2xl text-lime-300" aria-hidden="true">03</span>
+                <h2 class="mt-5 text-xl font-bold text-white">Feito para compartilhar</h2>
+                <p class="mt-2 text-sm leading-6 text-zinc-400">Chegue com os amigos. Saia com novas bandas na sua
+                    playlist.</p>
+            </article>
+        </section>
+
+        <section id="ingressos"
+            class="mb-14 overflow-hidden rounded-[2rem] bg-lime-300 px-6 py-10 text-zinc-950 sm:px-10 sm:py-12"
+            aria-labelledby="titulo-ingressos">
+            <div class="flex flex-wrap items-center justify-between gap-6">
+                <div>
+                    <p class="text-xs font-black uppercase tracking-[0.2em]">Seu próximo plano</p>
+                    <h2 id="titulo-ingressos" class="mt-3 max-w-2xl text-3xl font-black tracking-tight sm:text-4xl">A
+                        cidade fica melhor quando a gente se encontra.</h2>
+                </div>
+                <a class="inline-flex items-center justify-center rounded-full bg-zinc-950 px-6 py-3 text-sm font-bold text-white transition hover:bg-zinc-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 focus-visible:ring-offset-lime-300"
+                    href="mailto:oi@lumafestival.example">
+                    Quero saber mais <span class="ml-2" aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10">
+        <div
+            class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-7 text-sm text-zinc-500 sm:px-8">
+            <p><span class="font-black tracking-[0.16em] text-white">LUMA.</span> Festival de música independente.</p>
+            <p>Feito para a Atividade 02 · 2026</p>
+        </div>
+    </footer>
+</body>
+
+</html>
